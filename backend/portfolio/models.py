@@ -9,13 +9,13 @@ def project_image_path(instance, filename):
     
 
 class Author(models.Model):
-    author_name = models.CharField(max_length=30),
-    author_picture = models.ImageField(upload_to = author_image_path),
-    author_description = models.ImageField(max_length=200),
-    author_biography = models.TextField(),
-    author_mail = models.EmailField(),
-    author_github = models.URLField(),
-    author_linkedin = models.URLField(),
+    author_name = models.CharField(max_length=30)
+    author_picture = models.ImageField(upload_to = author_image_path, null=False)
+    author_description = models.CharField(max_length=200, null=False)
+    author_biography = models.TextField()
+    author_mail = models.EmailField(null=False)
+    author_github = models.URLField(null=False)
+    author_linkedin = models.URLField(null=False)
     contact_MD = models.TextField()
 
 
@@ -29,11 +29,11 @@ class Technology(models.Model):
         return self.name
 
 class Project(models.Model):
-    project_name = models.CharField(max_length=30),
-    project_picture = models.ImageField(upload_to = project_image_path),
-    project_github = models.URLField(),
+    project_name = models.CharField(max_length=30)
+    project_picture = models.ImageField(upload_to = project_image_path)
+    project_github = models.URLField(blank=False)
     project_link = models.URLField(blank=True)
-    project_description = models.TextField(),
+    project_description = models.TextField()
     technologies = models.ManyToManyField(
         Technology,
         related_name="projects"
@@ -44,10 +44,10 @@ class Project(models.Model):
 
 
 class About(models.Model):
-
-    about_MD = models.TextField(),
-    about_github = models.URLField(),
-    about_doc = models.URLField(),
+    about_name = models.CharField(max_length=3)
+    about_MD = models.TextField()
+    about_github = models.URLField(blank=False)
+    about_doc = models.URLField(blank=False)
 
     def __str__(self):
         return "about"
