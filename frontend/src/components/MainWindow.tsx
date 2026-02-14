@@ -2,7 +2,9 @@
 function MainWindow() {
     return(
         <div className="main-window">
-            hola
+            <div className="titlebar">
+
+            </div>
         </div>
     )
 }

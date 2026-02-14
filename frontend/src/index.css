@@ -10,6 +10,7 @@
     --button-bg: #e0e0ce;
 
     --main-window-bg: #ffffff;
+    --titlebar-bg: #999;
 }
 
 [data-theme='dark'] {
@@ -17,7 +18,7 @@
     --text-color: #f5f5dc;
     --button-bg: #333333;
 
-    --main-window-bg: #ffffff;
+    --main-window-bg: #0f0000;
 }
 
 .boton-redondo {
@@ -33,11 +34,25 @@
 }
 
 .main-window {
-    width: 200px;
-    height: 200px;
+    width: 50vw;
+    height: 60vh;
+    position: relative;
+
     background: var(--main-window-bg);
+    border: 2px solid black;
 }
 
+.titlebar {
+    width: 50vw;
+    height: 6vh;
+    top: -6vh;
+    
+    
+    background: var(--titlebar-bg);
+    position: absolute;
+
+
+}
 
 body {
     margin: 0;
@@ -45,6 +60,7 @@ body {
     color: var(--text-color);
     font-family: sans-serif;
 
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
