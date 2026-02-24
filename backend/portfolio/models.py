@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 def author_image_path(instance, filename):
-    return f"author/{instance.id}/{filename}"
+    return f"author/{instance}/{filename}"
 
 def project_image_path(instance, filename):
-    return f"projects/{instance.id}/{filename}"
+    return f"projects/{instance}/{filename}"
     
 
 class Author(models.Model):
