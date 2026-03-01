@@ -1,0 +1,33 @@
+/* Contenedor del texto */
+.author-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;
+    padding: 60px 20px;     /* Espacio para que no pegue al borde superior */
+}
+
+/* "Hi! I'm Jauri" */
+.author-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;      /* Tamaño grande como en la foto */
+    font-weight: 800;       /* Muy negrita */
+    margin: 0;
+    color: var(--text-color);
+}
+
+/* El nombre resaltado */
+.author-name span {
+    color: #d9906b;         /* El tono exacto de la imagen */
+    font-weight: 700;
+}
+
+/* "web developer" */
+.author-description {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--text-color);         /* Gris suave */
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}

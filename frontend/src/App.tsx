@@ -1,6 +1,6 @@
-import DarkModeButton from "./components/DarkModeButton";
+import DarkModeButton from "./components/DarkModeButtonComponent/DarkModeButton";
 
-import MainWindow from "./components/MainWindow";
+import MainWindow from "./components/MainWindowComponent/MainWindow";
 
 function App() {
   return (

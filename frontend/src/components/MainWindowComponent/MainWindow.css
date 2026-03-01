@@ -1,0 +1,32 @@
+.main-window {
+    width: 50vw;
+    height: 70vh;
+    position: relative;
+
+    background: var(--main-window-bg);
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+.titlebar {
+    height: 6vh;    
+    background: var(--titlebar-bg);
+    border-bottom: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+
+    padding-left: 1rem;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    
+}
