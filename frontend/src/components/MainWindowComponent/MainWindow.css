@@ -30,3 +30,12 @@
     letter-spacing: 0.5px;
     
 }
+
+.icons-grid {
+    display: flex;
+    justify-content: center; /* Centra el grupo de iconos en la pantalla */
+    align-items: flex-start;
+    gap: 40px;               /* Espacio uniforme entre cada unidad de icono */
+    margin-top: 50px;        /* Separación respecto al texto de arriba */
+    padding: 20px;
+}
