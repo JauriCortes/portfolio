@@ -1,0 +1,51 @@
+
+.wrapper-window {
+
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+
+    width: 50vw;
+    height: 70vh;
+
+    background: var(--main-window-bg);
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000; /* Asegura que esté por encima del main window */
+    overflow: hidden;
+    animation: popIn 0.2s ease-out;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper-titlebar {
+    height: 6vh;    
+    background: var(--titlebar-bg);
+    border-bottom: 2px solid black;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+
+    padding-left: 1rem;
+
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* El fondo oscuro semitransparente */
+
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}

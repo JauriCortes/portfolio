@@ -1,10 +1,16 @@
 import type { ElementType } from "react"
 import "./Icon.css"
 
-function Icon({ label, icon: IconComponent }: {label: string, icon: ElementType}) {
+type IconProps = {
+  label: string;
+  icon: ElementType;
+  onClick?: () => void;
+};
+
+function Icon({ label, icon: IconComponent, onClick }: IconProps) {
 
     return (
-        <div className="icon-unit">
+        <div className="icon-unit" onClick={onClick}>
             <IconComponent size={24}/>
             <p>{ label }</p>
         </div>
