@@ -1,0 +1,55 @@
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;       /* Ocupa todo el alto disponible de la ventana */
+    overflow: hidden;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background-color: var(--main-window-bg);
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 15%;
+    padding: 20px;
+
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.profile-pic {
+    width: 12vw;         /* Un poco más grande para que luzca */
+    height: 12vw;
+    border-radius: 50%;  /* La hace circular como en la foto */
+    object-fit: cover;   /* Evita que la foto se estire feo */
+}
+
+.header-text {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.header-text p {
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    color: #a0a0a0;      /* Un gris claro para que el nombre resalte más */
+}
+
+.description-md {
+    flex-grow: 1;       /* Toma el resto del espacio */
+    overflow-y: auto;   /* ¡Aquí es donde ocurre la magia del scroll! */
+    padding: 20px;
+}

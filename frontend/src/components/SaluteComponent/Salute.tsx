@@ -55,5 +55,4 @@ function Salute() {
     );
 }
 
-//<img height="60px" width="60px" src={`${API_URL}${author.author_picture}`}></img>
 export default Salute

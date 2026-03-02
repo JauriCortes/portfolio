@@ -5,7 +5,8 @@ import Salute from "../SaluteComponent/Salute"
 import './MainWindow.css'
 
 import { Smile, FolderGit2, MailPlus, Info } from 'lucide-react';
-import VentanaWrapper from "../WindowWraperComponent/WindowWraper";
+import FloatingWindow from "../FloatingWindowComponent/FloatingWindow";
+import BioContent from "../BioContent/BioContent";
 
 function MainWindow() {
 
@@ -20,22 +21,22 @@ function MainWindow() {
             <div className="window-body">
                 <Salute/>
                 <div className="icons-grid">
-                    <Icon onClick={()=>setActiveTab('Bio')} label="Bio" icon={ Smile }/>
-                    <Icon onClick={()=>setActiveTab('Projects')} label="Projects" icon={ FolderGit2 }/>
-                    <Icon onClick={()=>setActiveTab('Contacts')} label="Contact" icon={ MailPlus }/>
-                    <Icon onClick={()=>setActiveTab('About')} label="About" icon={ Info }/>
+                    <Icon onClick={()=>{closeWindow(); setActiveTab('Bio')}} label="Bio" icon={ Smile }/>
+                    <Icon onClick={()=>{closeWindow(); setActiveTab('Projects')}} label="Projects" icon={ FolderGit2 }/>
+                    <Icon onClick={()=>{closeWindow(); setActiveTab('Contacts')}} label="Contact" icon={ MailPlus }/>
+                    <Icon onClick={()=>{closeWindow(); setActiveTab('About')}} label="About" icon={ Info }/>
                 </div>
             </div>
 
             {activeTab && (
-                <VentanaWrapper title={activeTab} onClose={() => closeWindow()}>
+                <FloatingWindow title={activeTab} onClose={() => closeWindow()}>
 
-                    {activeTab === 'Bio' && <p>bio</p>}
+                    {activeTab === 'Bio' && <BioContent/>}
                     {activeTab === 'Projects' && <p>project</p>}
                     {activeTab === 'Contacts' && <p>contacts</p>}
                     {activeTab === 'About' && <p>about</p>}
                     
-                </VentanaWrapper>
+                </FloatingWindow>
                 
             )}
         </div>
