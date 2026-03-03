@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from .models import Author
+from .models import Author, Project
 
 # Create your views here.
 
@@ -28,4 +28,28 @@ def author(request):
         data = {}
 
     return JsonResponse(data)
-    
+
+def projects(request):
+
+    projects = Project.objects.all()
+
+    data = [
+        {
+            "id": p.id,
+            "project_name": p.project_name,
+            "project_picture": p.project_picture.url if p.project_picture else None,
+            "project_github": p.project_github,
+            "project_link": p.project_link,
+            "project_description": p.project_description,
+            "technologies": [
+                {
+                    "id": tech.id,
+                    "name": tech.name
+                }
+                for tech in p.technologies.all()
+            ]
+        }
+        for p in projects
+    ]
+
+    return JsonResponse(data, safe=False)

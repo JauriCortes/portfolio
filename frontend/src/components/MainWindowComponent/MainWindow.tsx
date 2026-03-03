@@ -7,6 +7,7 @@ import './MainWindow.css'
 import { Smile, FolderGit2, MailPlus, Info } from 'lucide-react';
 import FloatingWindow from "../FloatingWindowComponent/FloatingWindow";
 import BioContent from "../BioContent/BioContent";
+import ProjectsContent from "../ProjectsContent/ProjectsContent";
 
 function MainWindow() {
 
@@ -32,7 +33,7 @@ function MainWindow() {
                 <FloatingWindow title={activeTab} onClose={() => closeWindow()}>
 
                     {activeTab === 'Bio' && <BioContent/>}
-                    {activeTab === 'Projects' && <p>project</p>}
+                    {activeTab === 'Projects' && <ProjectsContent/>}
                     {activeTab === 'Contacts' && <p>contacts</p>}
                     {activeTab === 'About' && <p>about</p>}
                     

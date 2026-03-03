@@ -23,8 +23,8 @@
 }
 
 .profile-pic {
-    width: 12vw;         /* Un poco más grande para que luzca */
-    height: 12vw;
+    width: 50%;         /* Un poco más grande para que luzca */
+    height: 50%;
     border-radius: 50%;  /* La hace circular como en la foto */
     object-fit: cover;   /* Evita que la foto se estire feo */
 }
