@@ -1,14 +1,14 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 
-from .models import Author, Project
+from .models import Author, Project, About
 
 # Create your views here.
 
 def index(request):
     return JsonResponse({
         "status": "online",
-        "message": "Buena, la rata estamos es programando mi papacho"
+        "message": "Buena la rata, estamos es programando mi papacho"
     })
 
 def author(request):
@@ -53,3 +53,20 @@ def projects(request):
     ]
 
     return JsonResponse(data, safe=False)
+
+def about(request):
+
+    about = About.objects.first()
+
+    if about:
+        data = {
+            "id" : about.id,
+            "about_name": about.about_name,
+            "about_MD" : about.about_MD,
+            "about_github": about.about_github,
+            "about_doc": about.about_doc
+        }
+    else:
+        data = {}
+
+    return JsonResponse(data)

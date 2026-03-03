@@ -8,6 +8,8 @@ import { Smile, FolderGit2, MailPlus, Info } from 'lucide-react';
 import FloatingWindow from "../FloatingWindowComponent/FloatingWindow";
 import BioContent from "../BioContent/BioContent";
 import ProjectsContent from "../ProjectsContent/ProjectsContent";
+import ContactContent from "../ContanctContent/ContactContent";
+import AboutContent from "../AboutContent/AboutContent";
 
 function MainWindow() {
 
@@ -34,8 +36,8 @@ function MainWindow() {
 
                     {activeTab === 'Bio' && <BioContent/>}
                     {activeTab === 'Projects' && <ProjectsContent/>}
-                    {activeTab === 'Contacts' && <p>contacts</p>}
-                    {activeTab === 'About' && <p>about</p>}
+                    {activeTab === 'Contacts' && <ContactContent/>}
+                    {activeTab === 'About' && <AboutContent/>}
                     
                 </FloatingWindow>
                 
