@@ -24,39 +24,41 @@ function ProjectCard( { project }: ProjectProps) {
 
     return(
         <div className="project-card">
-            <div className="project-image">
-                <img height="50%" width="50%"
-                    src={`${API_URL}${project.project_picture}`}
-                    alt={project.project_name}
-                />
+            <div className='project-top-section'>
+
+                <div className='project-aside'>
+                    <div className="project-image-wrapper">
+                        <img
+                            src={`${API_URL}${project.project_picture}`}
+                            alt={project.project_name}
+                            />
+                    </div>
+
+                    <div className='project-footer'>
+                        <a href={project.project_github} target='_blank' rel='noreferrer' className='btn-github'>
+                            Github
+                        </a>
+                        {project.project_link &&(
+                            <a href={project.project_link} target='_blank' rel='noreferrer' className='btn-link'>
+                                Demo
+                            </a>
+                        )}
+                    </div>
+                </div>
+                <div className="project-info-header">
+                    <h3 className='project-name'>{project.project_name}</h3>
+                    <div className="tech-container">
+                        {project.technologies.map(tech => (
+                            <span key={tech.id} className="tech-badge">
+                                {tech.name}
+                            </span>
+                        ))}
+                    </div>
+                </div>
             </div>
 
-            <div className='project-footer'>
-                <a href={project.project_github} target='_blank' rel='noreferrer' className='btn-github'>
-                    Github
-                </a>
-                {project.project_link &&(
-                    <a href={project.project_link} target='_blank' rel='noreferrer' className='btn-link'>
-                        Demo
-                    </a>
-                )}
-            </div>
-
-            <div className="project-content">
-                <h3>{project.project_name}</h3>
-
-                <div className="tech-container">
-                    {project.technologies.map(tech => (
-                        <span key={tech.id} className="tech-badge">
-                            {tech.name}
-                        </span>
-                    ))}
-                </div>
-                
-                <div className="project-description">
-                    <ReactMarkdown>{project.project_description}</ReactMarkdown>
-                </div>
-
+            <div className="project-description">
+                <ReactMarkdown>{project.project_description}</ReactMarkdown>
             </div>
         </div>
     );

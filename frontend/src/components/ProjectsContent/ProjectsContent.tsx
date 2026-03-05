@@ -54,7 +54,7 @@ function ProjectsContent() {
     if (!projects) return null;
 
     return(
-        <div className="projects-div">
+        <div className="projects-grid">
             {projects.map((item) => (
                 <ProjectCard  project={item} />
             ))}

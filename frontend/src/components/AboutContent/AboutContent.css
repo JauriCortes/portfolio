@@ -1,0 +1,8 @@
+.icon-link {
+    cursor: pointer; /* Cambia la flechita por la mano */
+    transition: all 0.2s ease;
+}
+
+.icon-link:active {
+    transform: scale(0.4); /* Efecto de "presionado" muy sexy */
+}
