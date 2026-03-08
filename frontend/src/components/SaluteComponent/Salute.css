@@ -30,4 +30,6 @@
     color: var(--text-color);         /* Gris suave */
     font-weight: 400;
     letter-spacing: 0.5px;
+    white-space: pre-line;
+
 }

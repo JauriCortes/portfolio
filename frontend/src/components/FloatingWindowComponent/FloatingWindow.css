@@ -1,6 +1,6 @@
 
 .floating-window {
-
+    min-width: 400px;
     position: fixed;
 
     width: 30vw;
@@ -34,6 +34,8 @@
     font-weight: 500;
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+
+
 }
 
 /* El fondo oscuro semitransparente */
@@ -46,4 +48,6 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+
+    height: 6vh;
 }

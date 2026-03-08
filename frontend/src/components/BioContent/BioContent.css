@@ -13,20 +13,17 @@
 
     display: flex;
     align-items: center;
-    justify-content:center;
-    gap: 15%;
-    padding: 20px;
-
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-
-
+    justify-content:space-evenly;
+    
+    height: 50%;
 }
 
 .profile-pic {
-    width: 50%;         /* Un poco más grande para que luzca */
-    height: 50%;
+    width: 6vw;         /* Un poco más grande para que luzca */
+    height: 6vw;
     border-radius: 50%;  /* La hace circular como en la foto */
-    object-fit: cover;   /* Evita que la foto se estire feo */
+    object-fit:cover;
+    
 }
 
 .header-text {
@@ -52,4 +49,6 @@
     flex-grow: 1;       /* Toma el resto del espacio */
     overflow-y: auto;   /* ¡Aquí es donde ocurre la magia del scroll! */
     padding: 20px;
+
+    text-align: left;
 }

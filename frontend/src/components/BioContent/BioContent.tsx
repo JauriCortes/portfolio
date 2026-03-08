@@ -55,7 +55,7 @@ function BioContent() {
                 <img alt={author.author_name} className="profile-pic" src={`${API_URL}${author.author_picture}`}></img>
                 <div className="header-text">
                     <h1> { author.author_name } </h1>  
-                    <p> { author.author_description } </p>  
+                    <p> Bogotá based Web Developer </p>  
                 </div>
             </div>
             <div className="description-md">

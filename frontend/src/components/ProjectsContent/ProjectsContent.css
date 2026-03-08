@@ -2,5 +2,6 @@
 .projects-grid {
 
     padding: 5%;
-    overflow-y: auto;
+    overflow-y: scroll;
+
 }

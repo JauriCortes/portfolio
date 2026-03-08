@@ -1,0 +1,5 @@
+.contact-content {
+    overflow-y: auto;   /* ¡Aquí es donde ocurre la magia del scroll! */
+    padding: 5%;
+    text-align: left;
+}

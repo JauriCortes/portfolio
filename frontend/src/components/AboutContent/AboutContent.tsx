@@ -52,17 +52,9 @@ function AboutContent() {
     };
 
     return(
-        <div>
+        <div className="about-content">
             <div>
                 <ReactMarkdown>{about.about_MD}</ReactMarkdown>
-            </div>
-            <div>
-                <div className="icon-link" onClick={() => handleIconClick(about.about_github)}>
-                    <Github size="11%"/>
-                </div>
-                <div className="icon-link" onClick={() => handleIconClick(about.about_doc)}>
-                    <File size="11%"/>
-                </div>
             </div>
         </div>
     );

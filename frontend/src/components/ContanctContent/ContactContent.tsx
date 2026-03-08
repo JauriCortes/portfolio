@@ -44,7 +44,7 @@ function ContactContent() {
     if (!contact) return "null";
 
     return(
-        <div>
+        <div className="contact-content">
             <ReactMarkdown>{contact.contact_MD}</ReactMarkdown>
         </div>
     );
