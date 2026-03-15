@@ -4,7 +4,6 @@ import './AboutContent.css'
 
 import ReactMarkdown from 'react-markdown'
 
-import {Github, File} from 'lucide-react'
 
 function AboutContent() {
 
@@ -47,9 +46,6 @@ function AboutContent() {
     if (error) return <p>{error}</p>
     if (!about) return "null";
 
-    const handleIconClick = (url: string) => {
-        window.open(url, '_blank', 'noopener,noreferrer');
-    };
 
     return(
         <div className="about-content">
