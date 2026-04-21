@@ -1,7 +1,6 @@
-
 .projects-grid {
-
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     padding: 5%;
-    overflow-y: scroll;
-
 }

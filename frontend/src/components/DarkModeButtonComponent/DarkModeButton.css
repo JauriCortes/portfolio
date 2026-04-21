@@ -9,3 +9,19 @@
   top: 20px;
   left: 20px;
 }
+
+@media (max-width: 768px) {
+  .boton-redondo {
+    width: 36px;
+    height: 36px;
+    top: 6px;
+    right: 12px;
+    left: auto;
+    z-index: 1100;
+  }
+
+  .boton-redondo img {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Icon from "../IconComponent/Icon"
 import Salute from "../SaluteComponent/Salute"
+import DarkModeButton from "../DarkModeButtonComponent/DarkModeButton";
 
 import './MainWindow.css'
 
@@ -35,6 +36,8 @@ function MainWindow() {
                     <Icon onClick={()=>{closeWindow(); setActiveTab('About')}} label="About" icon={ Info }/>
                 </div>
             </div>
+
+            {!activeTab && <DarkModeButton/>}
 
             {activeTab && (
                 <FloatingWindow title={activeTab} onClose={() => closeWindow()}>

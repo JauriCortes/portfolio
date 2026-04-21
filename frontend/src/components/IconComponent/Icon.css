@@ -13,3 +13,11 @@
 .icon-unit:hover {
     transform: translateY(-5px);
 }
+
+@media (max-width: 768px) {
+    .icon-unit {
+        width: 70px;
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+}

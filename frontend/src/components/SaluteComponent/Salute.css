@@ -30,3 +30,17 @@
     opacity: 0.65;
     white-space: pre-line;
 }
+
+@media (max-width: 768px) {
+    .author-info {
+        padding: 40px 16px 28px;
+    }
+
+    .author-name {
+        font-size: 2.2rem;
+    }
+
+    .author-description {
+        font-size: 0.95rem;
+    }
+}

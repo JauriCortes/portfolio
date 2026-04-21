@@ -1,27 +1,23 @@
 .about-content {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
     padding: 5%;
     text-align: left;
-
-    overflow-y: auto;
 }
 
 .icon-link {
-    cursor: pointer; /* Cambia la flechita por la mano */
+    cursor: pointer;
     transition: all 0.2s ease;
-
 }
 
 .icon-link:active {
-    transform: scale(0.4); /* Efecto de "presionado" muy sexy */
+    transform: scale(0.4);
 }
 
 .icon-grid {
-
     display: flex;
     flex-direction: row;
-
-    align-content:safe;
     justify-content: center;
-
     height: 10%;
 }

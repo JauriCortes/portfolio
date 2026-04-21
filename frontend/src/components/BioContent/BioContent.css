@@ -46,9 +46,25 @@
 }
 
 .description-md {
-    flex-grow: 1;       /* Toma el resto del espacio */
-    overflow-y: auto;   /* ¡Aquí es donde ocurre la magia del scroll! */
+    flex-grow: 1;
+    overflow-y: auto;
     padding: 20px;
-
     text-align: left;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 24px 16px;
+        gap: 16px;
+    }
+
+    .profile-pic {
+        width: 72px;
+        height: 72px;
+    }
+
+    .header-text h1 {
+        font-size: 1.4rem;
+    }
 }
