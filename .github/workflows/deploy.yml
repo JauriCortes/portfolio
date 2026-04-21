@@ -21,6 +21,7 @@ jobs:
             git pull origin main
 
             cd frontend
+            echo "VITE_API_URL=https://jaucor.online" > .env
             pnpm install --frozen-lockfile
             pnpm build
 
