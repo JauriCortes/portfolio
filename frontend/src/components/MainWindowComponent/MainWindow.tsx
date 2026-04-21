@@ -2,6 +2,7 @@ import { useState } from "react";
 import Icon from "../IconComponent/Icon"
 import Salute from "../SaluteComponent/Salute"
 import DarkModeButton from "../DarkModeButtonComponent/DarkModeButton";
+import MusicButton from "../MusicButtonComponent/MusicButton";
 
 import './MainWindow.css'
 
@@ -38,6 +39,7 @@ function MainWindow() {
             </div>
 
             {!activeTab && <DarkModeButton/>}
+            <MusicButton/>
 
             {activeTab && (
                 <FloatingWindow title={activeTab} onClose={() => closeWindow()}>

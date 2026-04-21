@@ -1,0 +1,31 @@
+.music-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 100;
+}
+
+.music-btn:hover {
+    background-color: var(--titlebar-bg);
+}
+
+@media (max-width: 768px) {
+    .music-btn {
+        width: 36px;
+        height: 36px;
+        top: 6px;
+        left: auto;
+        right: 56px;
+    }
+}
