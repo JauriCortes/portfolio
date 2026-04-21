@@ -29,9 +29,14 @@ function FloatingWindow( {title, onClose, children}: FloatingWindowProps) {
     return createPortal(
         <div className="floating-window" style={ coordinates }>
             <div className="floating-titlebar">
+                <div className="floating-traffic">
+                    <span className="traffic-dot traffic-red"/>
+                    <span className="traffic-dot traffic-yellow"/>
+                    <span className="traffic-dot traffic-green"/>
+                </div>
                 { title }
                 <button className="close-btn" onClick={onClose}>
-                    <X size={20}/>
+                    <X size={16}/>
                 </button>
             </div>
                 { children }

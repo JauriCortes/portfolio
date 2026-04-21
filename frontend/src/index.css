@@ -1,34 +1,33 @@
 :root {
-
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
 
-    --bg-color: #f5f5dc;
-    --text-color: #2c2c2c;
-    --button-bg: #e0e0ce;
+    --bg-color: #eceef1;
+    --text-color: #1a1a1a;
+    --button-bg: #dddfe3;
 
     --main-window-bg: #ffffff;
-    --titlebar-bg: #999;
+    --titlebar-bg: #e4e4e4;
+    --border-color: rgba(0, 0, 0, 0.12);
 }
 
 [data-theme='dark'] {
-    --bg-color: #1b1f2a;        /* cielo nocturno */
-    --text-color: #e6e1d9;      /* beige suave, no blanco */
+    --bg-color: #1b1f2a;
+    --text-color: #e6e1d9;
     --button-bg: #2a3040;
 
-    --main-window-bg: #232938;  /* un poco más claro que el fondo */
-    --titlebar-bg: #2f3650;     /* leve contraste elegante */
+    --main-window-bg: #232938;
+    --titlebar-bg: #2f3650;
+    --border-color: rgba(255, 255, 255, 0.08);
 }
-
-
 
 body {
     margin: 0;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     height: 100vh;
     overflow: hidden;

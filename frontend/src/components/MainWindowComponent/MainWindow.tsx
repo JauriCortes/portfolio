@@ -19,6 +19,11 @@ function MainWindow() {
     return(
         <div className="main-window">
             <div className="titlebar">
+                <div className="titlebar-traffic">
+                    <span className="traffic-dot traffic-red"/>
+                    <span className="traffic-dot traffic-yellow"/>
+                    <span className="traffic-dot traffic-green"/>
+                </div>
                 Home
             </div>
             <div className="window-body">

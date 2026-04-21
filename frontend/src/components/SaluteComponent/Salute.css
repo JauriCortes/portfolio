@@ -1,35 +1,32 @@
-/* Contenedor del texto */
 .author-info {
     display: flex;
     flex-direction: column;
-    align-items: center;    /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 60px 20px;     /* Espacio para que no pegue al borde superior */
+    padding: 50px 20px 40px;
 }
 
-/* "Hi! I'm Jauri" */
 .author-name {
-    font-family: 'Inter', sans-serif;
-    font-size: 3.5rem;      /* Tamaño grande como en la foto */
-    font-weight: 800;       /* Muy negrita */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
     margin: 0;
     color: var(--text-color);
+    letter-spacing: -0.5px;
 }
 
-/* El nombre resaltado */
 .author-name span {
-    color: #d9906b;         /* El tono exacto de la imagen */
+    color: #d9906b;
     font-weight: 700;
 }
 
-/* "web developer" */
 .author-description {
     margin-top: 10px;
-    font-size: 1.2rem;
-    color: var(--text-color);         /* Gris suave */
+    font-size: 1.05rem;
+    color: var(--text-color);
     font-weight: 400;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.2px;
+    opacity: 0.65;
     white-space: pre-line;
-
 }

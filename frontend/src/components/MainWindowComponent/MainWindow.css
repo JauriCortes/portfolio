@@ -1,43 +1,58 @@
 .main-window {
     min-width: 700px;
-
     width: 50vw;
     height: 70vh;
     position: relative;
 
     background: var(--main-window-bg);
-    border: 2px solid black;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
 
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
-    
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);    
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-
 .titlebar {
-    height: 6vh;    
+    height: 44px;
     background: var(--titlebar-bg);
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid var(--border-color);
 
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
-
-    padding-left: 1rem;
+    justify-content: center;
 
     font-weight: 500;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+    color: var(--text-color);
+    position: relative;
 }
+
+.titlebar-traffic {
+    display: flex;
+    gap: 6px;
+    position: absolute;
+    left: 14px;
+}
+
+.traffic-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.traffic-red    { background: #ff5f57; }
+.traffic-yellow { background: #febc2e; }
+.traffic-green  { background: #28c840; }
 
 .icons-grid {
     display: flex;
-    justify-content: center; /* Centra el grupo de iconos en la pantalla */
+    justify-content: center;
     align-items: flex-start;
-    gap: 40px;               /* Espacio uniforme entre cada unidad de icono */
-    margin-top: 50px;        /* Separación respecto al texto de arriba */
+    gap: 40px;
+    margin-top: 50px;
     padding: 20px;
 }
